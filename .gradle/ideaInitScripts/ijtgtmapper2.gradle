@@ -1,0 +1,5 @@
+ext.pathMapper = [:]
+ext.pathMapper.put("//wsl\$/Ubuntu-18.04/usr/lib/jvm/java-11-openjdk-amd64/bin/java", "/usr/lib/jvm/java-11-openjdk-amd64/bin/java")
+ext.pathMapper.put("//wsl\$/Ubuntu-18.04/home/pan/git/1a", "/home/pan/git/1a")
+ext.pathMapper.put("<<target java executable path>>", "/usr/lib/jvm/java-11-openjdk-amd64/bin/java")
+ext.mapPath = { path -> pathMapper.get(path) ?: path }
