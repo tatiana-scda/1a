@@ -2,6 +2,7 @@ package com.tatiana.gsl.domain.service;
 
 import com.tatiana.gsl.api.response.RouteResponse;
 //import com.tatiana.gsl.domain.model.entity.Address;
+import com.tatiana.gsl.domain.enumerator.RouteStatus;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +31,13 @@ public class RouteService {
 //        response.setCurrentLocation(vehicle.getCurrentLocation());
 //        response.setDriver(vehicle.getDriver());
 
-        return  new RouteResponse();
+        return  new RouteResponse()
+                .withRouteId(routeId)
+                .withStatus(RouteStatus.IN_PROGRESS.getStatus())
+                .withDriver("Pedro Martines")
+                .withCurrentLocation("Rua Padre Anchieta 234 Barbacena")
+                .withDestination("Rua Sergipe 10 Belo Horizonte")
+                .withOrigin("Avenida Augusta 55 Sao Paulo");
     }
 //
 //    String constructAddress(Address address) {

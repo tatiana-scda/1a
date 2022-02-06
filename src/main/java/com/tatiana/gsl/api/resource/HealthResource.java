@@ -10,6 +10,6 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RequestMapping(path = "/")
 public interface HealthResource {
 
-	@GetMapping(produces = APPLICATION_JSON_VALUE, consumes = APPLICATION_JSON_VALUE)
+	@GetMapping
 	String getStatus();
 }

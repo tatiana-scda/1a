@@ -57,3 +57,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+build
+out

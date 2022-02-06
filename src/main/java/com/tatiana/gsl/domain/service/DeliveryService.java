@@ -24,6 +24,9 @@ public class DeliveryService {
 //        response.setProductDescription(product.getDescription());
 
         return
-                new DeliveryResponse().withDeliveryId(deliveryId).withStatus(DeliveryStatus.ON_ROUTE.getStatus());
+                new DeliveryResponse()
+                        .withDeliveryId(deliveryId)
+                        .withStatus(DeliveryStatus.ON_ROUTE.getStatus())
+                        .withProductDescription("Livro Senhor dos Aneis - Edicao Colecionador");
     }
 }
