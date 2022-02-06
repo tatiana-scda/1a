@@ -10,6 +10,6 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RequestMapping(path = "/v1/route")
 public interface RouteResource {
 
-	@GetMapping(path = "/{id}", produces = APPLICATION_JSON_VALUE, consumes = APPLICATION_JSON_VALUE)
+	@GetMapping(path = "/{id}", produces = APPLICATION_JSON_VALUE)
 	RouteResponse getRoute(@PathVariable Integer id);
 }
