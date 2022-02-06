@@ -3,6 +3,7 @@ package com.tatiana.gsl.api.resource;
 import com.tatiana.gsl.api.request.CreateUserRequest;
 import com.tatiana.gsl.api.request.LoginRequest;
 //import com.tatiana.gsl.domain.model.entity.User;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +14,7 @@ import java.util.Map;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
+@CrossOrigin
 @RequestMapping(path = "/v1")
 public interface UserResource {
 
