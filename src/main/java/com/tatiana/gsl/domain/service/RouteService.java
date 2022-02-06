@@ -35,6 +35,10 @@ public class RouteService {
             return  new RouteResponse();
         }
 
+        if(routeId == 500) {
+            return  null;
+        }
+
         if(routeId == 3) {
             return  new RouteResponse()
                     .withRouteId(routeId.toString())

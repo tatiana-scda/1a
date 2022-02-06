@@ -24,8 +24,8 @@ public class DeliveryService {
 //        response.setStatus(delivery.getStatus());
 //        response.setProductDescription(product.getDescription());
 
-        if(deliveryId == 404) {
-            return  new DeliveryResponse();
+        if (deliveryId == 404) {
+            return new DeliveryResponse();
         }
 
         if (deliveryId == 4) {
@@ -44,7 +44,7 @@ public class DeliveryService {
                             .withProductDescription("Livro Os 7 Maridos de Evelyn Hugo");
         }
 
-        if(deliveryId == 2) {
+        if (deliveryId == 2) {
             return
                     new DeliveryResponse()
                             .withDeliveryId(deliveryId.toString())
@@ -52,10 +52,13 @@ public class DeliveryService {
                             .withProductDescription("Livro Batwoman 52");
         }
 
-        return
-                new DeliveryResponse()
-                        .withDeliveryId(deliveryId.toString())
-                        .withStatus(DeliveryStatus.ON_ROUTE.getStatus())
-                        .withProductDescription("Livro Senhor dos Aneis - Edicao Colecionador");
+        if (deliveryId == 3) {
+            return
+                    new DeliveryResponse()
+                            .withDeliveryId(deliveryId.toString())
+                            .withStatus(DeliveryStatus.ON_ROUTE.getStatus())
+                            .withProductDescription("Livro Senhor dos Aneis - Edicao Colecionador");
+        }
+        return null;
     }
 }
