@@ -11,7 +11,7 @@ import lombok.With;
 @With
 public class RouteResponse {
 
-    Integer routeId;
+    String routeId;
 
     String status;
 

@@ -31,9 +31,13 @@ public class RouteService {
 //        response.setCurrentLocation(vehicle.getCurrentLocation());
 //        response.setDriver(vehicle.getDriver());
 
-        if(routeId == 2) {
+        if(routeId == 404) {
+            return  new RouteResponse();
+        }
+
+        if(routeId == 3) {
             return  new RouteResponse()
-                    .withRouteId(routeId)
+                    .withRouteId(routeId.toString())
                     .withStatus(RouteStatus.DONE.getStatus())
                     .withDriver("Ana Martines")
                     .withCurrentLocation("Rua Rio de Janeiro 234 Rio de Janeiro")
@@ -41,9 +45,9 @@ public class RouteService {
                     .withOrigin("Avenida Sao Paulo 55 Sao Paulo");
         }
 
-        if(routeId == 3) {
+        if(routeId == 2) {
             return  new RouteResponse()
-                    .withRouteId(routeId)
+                    .withRouteId(routeId.toString())
                     .withStatus(RouteStatus.PROCESSING.getStatus())
                     .withDriver("Ricardo Martines")
                     .withCurrentLocation("Rua Campo Grande 234 Campo Grande")
@@ -52,7 +56,7 @@ public class RouteService {
         }
 
         return  new RouteResponse()
-                .withRouteId(routeId)
+                .withRouteId(routeId.toString())
                 .withStatus(RouteStatus.IN_PROGRESS.getStatus())
                 .withDriver("Pedro Martines")
                 .withCurrentLocation("Rua Padre Anchieta 234 Barbacena")

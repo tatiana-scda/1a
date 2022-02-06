@@ -1,6 +1,7 @@
 package com.tatiana.gsl.domain.service;
 
 import com.tatiana.gsl.api.response.DeliveryResponse;
+import com.tatiana.gsl.api.response.RouteResponse;
 import com.tatiana.gsl.domain.enumerator.DeliveryStatus;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,33 +24,37 @@ public class DeliveryService {
 //        response.setStatus(delivery.getStatus());
 //        response.setProductDescription(product.getDescription());
 
-        if (deliveryId == 2) {
+        if(deliveryId == 404) {
+            return  new DeliveryResponse();
+        }
+
+        if (deliveryId == 4) {
             return
                     new DeliveryResponse()
-                            .withDeliveryId(deliveryId)
+                            .withDeliveryId(deliveryId.toString())
                             .withStatus(DeliveryStatus.DELIVERED.getStatus())
                             .withProductDescription("Livro Capitaes de Areia");
         }
 
-        if (deliveryId == 3) {
+        if (deliveryId == 1) {
             return
                     new DeliveryResponse()
-                            .withDeliveryId(deliveryId)
+                            .withDeliveryId(deliveryId.toString())
                             .withStatus(DeliveryStatus.DEBT.getStatus())
                             .withProductDescription("Livro Os 7 Maridos de Evelyn Hugo");
         }
 
-        if(deliveryId == 4) {
+        if(deliveryId == 2) {
             return
                     new DeliveryResponse()
-                            .withDeliveryId(deliveryId)
+                            .withDeliveryId(deliveryId.toString())
                             .withStatus(DeliveryStatus.PAID.getStatus())
                             .withProductDescription("Livro Batwoman 52");
         }
 
         return
                 new DeliveryResponse()
-                        .withDeliveryId(deliveryId)
+                        .withDeliveryId(deliveryId.toString())
                         .withStatus(DeliveryStatus.ON_ROUTE.getStatus())
                         .withProductDescription("Livro Senhor dos Aneis - Edicao Colecionador");
     }

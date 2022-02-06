@@ -11,7 +11,7 @@ import lombok.With;
 @With
 public class DeliveryResponse {
 
-    Integer deliveryId;
+    String deliveryId;
 
     String status;
 
