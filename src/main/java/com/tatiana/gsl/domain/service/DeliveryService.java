@@ -23,6 +23,30 @@ public class DeliveryService {
 //        response.setStatus(delivery.getStatus());
 //        response.setProductDescription(product.getDescription());
 
+        if (deliveryId == 2) {
+            return
+                    new DeliveryResponse()
+                            .withDeliveryId(deliveryId)
+                            .withStatus(DeliveryStatus.DELIVERED.getStatus())
+                            .withProductDescription("Livro Capitaes de Areia");
+        }
+
+        if (deliveryId == 3) {
+            return
+                    new DeliveryResponse()
+                            .withDeliveryId(deliveryId)
+                            .withStatus(DeliveryStatus.DEBT.getStatus())
+                            .withProductDescription("Livro Os 7 Maridos de Evelyn Hugo");
+        }
+
+        if(deliveryId == 4) {
+            return
+                    new DeliveryResponse()
+                            .withDeliveryId(deliveryId)
+                            .withStatus(DeliveryStatus.PAID.getStatus())
+                            .withProductDescription("Livro Batwoman 52");
+        }
+
         return
                 new DeliveryResponse()
                         .withDeliveryId(deliveryId)

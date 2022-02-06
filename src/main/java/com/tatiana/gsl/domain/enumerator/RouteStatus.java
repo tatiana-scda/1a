@@ -6,9 +6,9 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum RouteStatus {
-    PROCESSING ("processing"),
-    IN_PROGRESS ("in_progress"),
-    DONE ("done");
+    PROCESSING ("PROCESSING"),
+    IN_PROGRESS ("IN_PROGRESS"),
+    DONE ("DONE");
 
     private String status;
 }

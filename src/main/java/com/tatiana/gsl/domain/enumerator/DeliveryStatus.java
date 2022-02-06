@@ -6,10 +6,10 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum DeliveryStatus {
-    PROCESSING_PAYMENT ("processing_payment"),
-    PAYMENT_DONE("payment_done"),
-    ON_ROUTE("on_route"),
-    RECEIVED("received");
+    DEBT("DEBT"),
+    PAID("PAID"),
+    ON_ROUTE("ON_ROUTE"),
+    DELIVERED("DELIVERED");
 
     private String status;
 }

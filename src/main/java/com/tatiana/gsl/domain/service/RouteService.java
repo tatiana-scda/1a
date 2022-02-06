@@ -31,6 +31,26 @@ public class RouteService {
 //        response.setCurrentLocation(vehicle.getCurrentLocation());
 //        response.setDriver(vehicle.getDriver());
 
+        if(routeId == 2) {
+            return  new RouteResponse()
+                    .withRouteId(routeId)
+                    .withStatus(RouteStatus.DONE.getStatus())
+                    .withDriver("Ana Martines")
+                    .withCurrentLocation("Rua Rio de Janeiro 234 Rio de Janeiro")
+                    .withDestination("Rua Belo Horizonte 10 Belo Horizonte")
+                    .withOrigin("Avenida Sao Paulo 55 Sao Paulo");
+        }
+
+        if(routeId == 3) {
+            return  new RouteResponse()
+                    .withRouteId(routeId)
+                    .withStatus(RouteStatus.PROCESSING.getStatus())
+                    .withDriver("Ricardo Martines")
+                    .withCurrentLocation("Rua Campo Grande 234 Campo Grande")
+                    .withDestination("Rua Rio Branco 10 Rio Branco")
+                    .withOrigin("Avenida Pelotas 55 Pelotas");
+        }
+
         return  new RouteResponse()
                 .withRouteId(routeId)
                 .withStatus(RouteStatus.IN_PROGRESS.getStatus())
